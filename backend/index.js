@@ -1,5 +1,4 @@
 const express = require("express");
-const data = require("./data/data");
 const colors = require("colors");
 const cors = require("cors");
 const passport = require("passport");
@@ -9,7 +8,6 @@ const flash = require("express-flash");
 const { notFound } = require("./Middlewares/notFound");
 const { errorHandler } = require("./Middlewares/errorHandler");
 require("dotenv").config();
-
 const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
 const chatRoutes = require("./routes/chatRoutes");
