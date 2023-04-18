@@ -1,0 +1,38 @@
+{
+  "name": "conchat",
+  "version": "1.0.0",
+  "description": "This is a chatting application for our organization",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon backend/index.js",
+    "client": "cd ./frontend && npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CHIRAG-GUPTA-987/ConChat.git"
+  },
+  "author": "Chirag Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CHIRAG-GUPTA-987/ConChat/issues"
+  },
+  "homepage": "https://github.com/CHIRAG-GUPTA-987/ConChat#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.0",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^7.1.2",
+    "socket.io": "^4.6.1"
+  }
+}
