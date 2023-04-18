@@ -35,7 +35,7 @@ import { Effect } from "react-notification-badge";
 import NotificationBadge from "react-notification-badge/lib/components/NotificationBadge";
 import io from "socket.io-client";
 
-const ENDPOINT = "http://localhost:5050";
+const ENDPOINT = "https://eatable-toothpaste-production.up.railway.app";
 let socket;
 
 const SideDrawer = () => {
@@ -65,7 +65,7 @@ const SideDrawer = () => {
             authorization: `Bearer ${user.authToken}`,
           },
         };
-        const url = `http://localhost:5050/api/user?search=${search}`;
+        const url = `https://eatable-toothpaste-production.up.railway.app/api/user?search=${search}`;
         const { data } = await axios.get(url, config);
         setSearchResult(data);
       } catch (e) {

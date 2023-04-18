@@ -93,7 +93,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:5050/api/user/register",
+        "https://eatable-toothpaste-production.up.railway.app/api/user/register",
         {
           firstName,
           lastName,

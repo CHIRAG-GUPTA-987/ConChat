@@ -16,7 +16,7 @@ const ShowUsers = ({ users, setLoadingChat, onClose }) => {
           Authorization: `Bearer ${user.authToken}`,
         },
       };
-      const url = `http://localhost:5050/api/chat`;
+      const url = `https://eatable-toothpaste-production.up.railway.app/api/chat`;
       const { data } = await axios.post(url, { userId }, config);
       if (chats && !chats.find((c) => c._id === data._id))
         setChats([data, ...chats]);

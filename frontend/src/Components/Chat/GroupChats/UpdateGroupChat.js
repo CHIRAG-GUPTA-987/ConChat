@@ -54,7 +54,7 @@ const UpdateGroupChat = ({ children, overlay, user, closeContext, chat }) => {
           Authorization: `Bearer ${user.authToken}`,
         },
       };
-      const url = `http://localhost:5050/api/chat/group/rename`;
+      const url = `https://eatable-toothpaste-production.up.railway.app/api/chat/group/rename`;
       const { data } = await axios.put(
         url,
         {
@@ -124,7 +124,7 @@ const UpdateGroupChat = ({ children, overlay, user, closeContext, chat }) => {
           Authorization: `Bearer ${user.authToken}`,
         },
       };
-      const url = `http://localhost:5050/api/chat/group/adduser`;
+      const url = `https://eatable-toothpaste-production.up.railway.app/api/chat/group/adduser`;
       const { data } = await axios.put(
         url,
         {
@@ -214,7 +214,7 @@ const UpdateGroupChat = ({ children, overlay, user, closeContext, chat }) => {
           Authorization: `Bearer ${user.authToken}`,
         },
       };
-      const url = `http://localhost:5050/api/chat/group/remove`;
+      const url = `https://eatable-toothpaste-production.up.railway.app/api/chat/group/remove`;
       const { data } = await axios.put(
         url,
         {

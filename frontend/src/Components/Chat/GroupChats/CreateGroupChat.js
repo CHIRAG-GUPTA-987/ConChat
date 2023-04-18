@@ -44,7 +44,7 @@ const CreateGroupChat = ({
             authorization: `Bearer ${loggedUser.authToken}`,
           },
         };
-        const url = `http://localhost:5050/api/user?search=${sq}`;
+        const url = `https://eatable-toothpaste-production.up.railway.app/api/user?search=${sq}`;
         const { data } = await axios.get(url, config);
         let options = [];
         for (let d of data) {
@@ -120,7 +120,7 @@ const CreateGroupChat = ({
           Authorization: `Bearer ${loggedUser.authToken}`,
         },
       };
-      const url = `http://localhost:5050/api/chat/group/new`;
+      const url = `https://eatable-toothpaste-production.up.railway.app/api/chat/group/new`;
       const { data } = await axios.post(
         url,
         {
