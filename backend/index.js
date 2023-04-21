@@ -51,7 +51,7 @@ const server = app.listen(PORT, () => {
 
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
-  cors: "https://hesitant-oil-production.up.railway.app",
+  cors: "https://conchat.onrender.com",
 });
 
 io.on("connection", (socket) => {
