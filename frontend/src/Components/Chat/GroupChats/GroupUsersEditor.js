@@ -38,7 +38,7 @@ const GroupUsersEditor = ({
             authorization: `Bearer ${user.authToken}`,
           },
         };
-        const url = `https://eatable-toothpaste-production.up.railway.app/api/user?search=${sq}`;
+        const url = `${process.env.REACT_APP_BACKENDURL}/api/user?search=${sq}`;
         const { data } = await axios.get(url, config);
         let options = [];
         for (let d of data) {

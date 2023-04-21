@@ -29,7 +29,7 @@ const MyChats = () => {
           Authorization: `Bearer ${user.authToken}`,
         },
       };
-      const url = `https://eatable-toothpaste-production.up.railway.app/api/chat`;
+      const url = `${process.env.REACT_APP_BACKENDURL}/api/chat`;
       const { data } = await axios.get(url, config);
       setChats(data);
     } catch (e) {

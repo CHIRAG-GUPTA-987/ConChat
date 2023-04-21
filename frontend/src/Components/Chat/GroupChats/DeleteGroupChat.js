@@ -37,7 +37,7 @@ const DeleteGroupChat = ({ children, overlay, user, closeContext, chat }) => {
           Authorization: `Bearer ${user.authToken}`,
         },
       };
-      const url = `https://eatable-toothpaste-production.up.railway.app/api/chat/group/kill`;
+      const url = `${process.env.REACT_APP_BACKENDURL}/api/chat/group/kill`;
       const { data } = await axios.delete(url, {
         headers: config.headers,
         data: { chatId: chat._id },

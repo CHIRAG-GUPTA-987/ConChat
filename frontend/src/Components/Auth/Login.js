@@ -47,7 +47,7 @@ const Login = () => {
       let data = {};
       if (username === `guest${guestId}`) {
         data = await axios.post(
-          "https://eatable-toothpaste-production.up.railway.app/api/user/register",
+          `${process.env.REACT_APP_BACKENDURL}/api/user/register`,
           {
             firstName: "Guest",
             email: `${guestId}@guest.conchat`,
@@ -58,7 +58,7 @@ const Login = () => {
         );
       } else {
         data = await axios.post(
-          `${process.env.BACKENDURL}/api/user/login`,
+          `${process.env.REACT_APP_BACKENDURL}/api/user/login`,
           {
             username,
             password,

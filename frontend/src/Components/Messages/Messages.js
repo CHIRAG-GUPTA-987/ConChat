@@ -5,7 +5,6 @@ import axios from "axios";
 import ScrollableChats from "../Chat/ScrollableChats";
 import io from "socket.io-client";
 
-const ENDPOINT = "https://eatable-toothpaste-production.up.railway.app";
 let socket, selectedChatCompare;
 
 const Messages = () => {
@@ -26,7 +25,7 @@ const Messages = () => {
           Authorization: `Bearer ${user.authToken}`,
         },
       };
-      const url = `https://eatable-toothpaste-production.up.railway.app/api/message/fetch`;
+      const url = `${process.env.REACT_APP_BACKENDURL}/api/message/fetch`;
       const { data } = await axios.get(`${url}/${selectedChat._id}`, config);
       setMessages(data);
       socket.emit("Join Chat", selectedChat._id);
@@ -67,7 +66,7 @@ const Messages = () => {
               Authorization: `Bearer ${user.authToken}`,
             },
           };
-          const url = `https://eatable-toothpaste-production.up.railway.app/api/message`;
+          const url = `${process.env.REACT_APP_BACKENDURL}/api/message`;
           const { data } = await axios.post(
             url,
             {
@@ -139,7 +138,7 @@ const Messages = () => {
   }, [selectedChat]);
 
   useEffect(() => {
-    socket = io(ENDPOINT);
+    socket = io(process.env.REACT_APP_BACKENDURL);
     socket.emit("setup", user);
     socket.on("connected", () => {
       setSocketConnection(true);
